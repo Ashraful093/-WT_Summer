@@ -1,32 +1,98 @@
 <?php
-$number1 = $_POST["number1"];
-$number1 =(float)$number1;
-echo "your First number is : ".$number1. "and";
+if (isset($_POST['Submit']))
 
-$number2 = $_POST["number2"];
-$number2 =(float)$number2;
-echo "your First number is : ".$number2;
-$button=$_POST["button"];
-echo"<br>";
-
-
-
-
-
-if ($button== "+")
 {
-    echo "Addition:". $number1+$number2;
-}
-if ($button== "-")
-{
-    echo "Substruction:". $number1-$number2;
-}
-if ($button== "*")
-{
-    echo "Multiplication:". $number1*$number2;
-}
-if ($button== "/")
-{
-    echo "Division:". $number1/$number2;
+
+    $name = $_REQUEST['fname'];
+        if ($name == '')
+ 
+    {
+        echo 'Please Enter a valid First Name';
+    }
+         else
+    {
+        echo 'Your First Name is ' . $name;
+    }
+    echo '<br>';
+
+    $name2 = $_REQUEST['lname'];
+        if ($name2 == '')
+    {
+        echo 'Please Enter a valid Last Name';
+    } else
+    {
+        echo 'Your Last Name is ' . $name2;
+    }
+
+    echo '<br>';
+
+    $Age = $_REQUEST['age'];
+
+        if ($Age == '')
+    {
+        echo 'Please Enter your Age ';
+    } else
+    {
+        echo 'Your Age is ' . $Age;
+    }
+
+    echo '<br>';
+   
+    if (
+        isset($_POST['designation1']) ||   
+        isset($_POST['designation2']) ||
+        isset($_POST['designation3']))
+        {
+        if (isset($_POST['designation1'])) {
+            echo 'You  Select Junior Programmer ';
+            echo '<br>';
+        }
+        if (isset($_POST['designation2'])) {
+            echo 'You  Select Senior Programmer';
+            echo '<br>';
+        }
+        if (isset($_POST['designation3'])) {
+            echo 'You  Select Project Lead';
+            echo '<br>';
+        }
+    } else {
+        echo 'You havent selected anything';
+    }
+
+    echo '<br>';
+
+   
+    if (
+        isset($_POST['PreferredLanguage1']) ||
+        isset($_POST['PreferredLanguage2']) ||
+        isset($_POST['PreferredLanguage3'])) {
+        if (isset($_POST['PreferredLanguage1'])) {
+            echo 'You  Select JAVA ';
+            echo '<br>';
+        }
+
+        if (isset($_POST['PreferredLanguage2'])) {
+            echo 'You  Select PHP';
+            echo '<br>';
+        }
+        if (isset($_POST['PreferredLanguage3'])) {
+            echo 'You  Select C++';
+            echo '<br>';
+        }
+    }
+    else {
+        echo 'You Havent Select a checkbox';
+        echo '<br>';
+    }
+
+
+    $Password = $_REQUEST['password'];
+    if (strlen($Password) < 5) {
+        echo 'Enter a valid password';
+    } else
+     {
+        echo 'password is valid';
+    }
+
 }
 ?>
