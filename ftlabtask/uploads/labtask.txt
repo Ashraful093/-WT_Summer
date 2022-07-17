@@ -1,0 +1,48 @@
+import java.lang.*;
+
+public class Box
+{
+	private double length;
+	private double height;
+    private double width;
+	
+	public void setLength(double l)
+	{
+		length = l;
+	}
+
+	public void setHeight(double h)
+	{
+		height = h;
+	}
+    public void setWidth(double w)
+	{
+	    width = w;
+	}
+	public double getLength()
+	{
+		return length;
+	}
+
+	public double getHeight()
+	{
+	   return height;
+	}
+
+	public double getWidth()
+	{
+		return width;
+	}
+	public static void main(String[] args)
+	{
+		Box c = new Box();
+		
+        c.setLength(6.5);
+		c.setHeight(1.5);
+		c.setWidth(2.5);
+		
+        System.out.println("The length is: "+c.getLength()+"inches");
+		System.out.println("The height is: "+c.getHeight()+"inches");
+		System.out.println("The width is: "+c.getWidth()+"inches");
+	}
+}
